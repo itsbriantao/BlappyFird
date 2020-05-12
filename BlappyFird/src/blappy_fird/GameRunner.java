@@ -88,23 +88,8 @@ public class GameRunner extends JFrame implements KeyListener, ActionListener {
 	// Utility method to end the game
 	private void endGame() {
 		int score = getScore();
-		leaderboard = new LeaderBoard(this);
 		String name = JOptionPane.showInputDialog("Good run!\n"+"Score: " + score + "\nEnter you name: ");
-		
-		if (leaderboard.isNewRecord(score)){
-            String player_name = name;
-            leaderboard.addRecord(new Record(player_name, score, new Date()));    
-        } 
-		
-		//leaderboardView.add("Leaderboard", leaderboard);
-		//add(leaderboardView);
-		setLocationRelativeTo(this);
-		leaderboard.setVisible(true);
-		
-		//if (highScore < score) highScore = score; // Set the new high score
-		
-		//System.out.println(name);
-		//JOptionPane.showMessageDialog(this, "High score: "+ highScore);
+		leaderboard = new LeaderBoard(this, score, name);
 		gameReset();
 	}
 	

@@ -28,6 +28,6 @@ public class Record implements Serializable {
 	
 	@Override
 	public String toString() {
-		return getName() + " " + getScore() + "\n";
+		return getName() + " " + getScore();
 	}
 }
