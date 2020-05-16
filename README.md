@@ -58,7 +58,7 @@ You can also import the code straight into your IDE, such as Eclipse or IntelliJ
 
 ### Sequence Diagram
 
-<img src="./README_pictures/sequence_diagram.jpg" alt="Sequence Diagram" height="400">
+<img src="./README_pictures/sequence_diagram.jpg" alt="Sequence Diagram">
 
 ---
 
@@ -85,3 +85,11 @@ The application will be hosted on the local server running on port 8080. Using s
 ---
 
 ## UI Data Transport
+
+<img src="./README_pictures/gr_actionPerformed.jpg" alt="GameRunner's actionPerformed method" height="400">
+
+> The game is run in the GameRunner class. This class calls the actionPerformed() method, shown above, every 15 ms. In turn, actionPerformed() calls the repaint() method on the GameBoard gb. Inside the GameBoard, this calls the paintComponent() method.
+
+<img src="./README_pictures/gb_paintComponent.jpg" alt="GameBoard's paintComponent method" height="400">
+
+> The GameBoard holds and draws all the visual elements of the game. The frequent calling of the repaint() method updates all visual changes to the GameBoard to produce the animation effect.
